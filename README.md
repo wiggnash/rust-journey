@@ -37,6 +37,7 @@ Navigate through the folders to access:
 - Progress Logs: Updates on milestones and challenges faced during the learning process.
 
 ## Repository Structure
+```
 rust-learning-journey/
 ├── notes/
 │   ├── 01-introduction-to-rust.md
@@ -51,6 +52,7 @@ rust-learning-journey/
 │   ├── week2.md
 │   └── ...
 └── README.md
+```
 
 - notes/: Contains detailed write-ups on various Rust topics.
 - code/: Houses code snippets and sample programs.
