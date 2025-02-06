@@ -1,0 +1,1 @@
+/home/wiggnash/Vicky/Programming\ Language\ Notes/Rust\ Programming\ Language/code/hello_cargo/target/debug/hello_cargo: /home/wiggnash/Vicky/Programming\ Language\ Notes/Rust\ Programming\ Language/code/hello_cargo/src/main.rs
