@@ -18,6 +18,12 @@ fn main() {
     let spaces = spaces.len(); // changed to number with the help of shadowing
     println!("the number of spaces is {spaces}");
 
+    let mut string_type: &str = "Vigneshwar";
+    println!("This is string type: {string_type}");
+
+    string_type = "Deivasigamani";
+    println!("This is string type: {string_type}");
+
     let guess: u32 = "42".parse().expect("Not a number!");
     println!("Type anotated when converting from one type to another : {guess}");
 
