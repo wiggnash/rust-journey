@@ -46,14 +46,70 @@
 //     println!("{copy_integer}");
 // }
 
+// fn main() {
+//     let name = String::from("Vigneshwar");
+//     let my_name = greeting(name);
+
+//     println!("Welcome to my course {my_name}");
+// }
+
+// fn greeting(name: String) -> String {
+//     println!("Hello {name}");
+//     name
+// }
+
+// This is not possible and throw an error
+
+// fn main() {
+//     let s1 = String::from("Hello");
+//     let length = get_string_length(s1);
+//     println!("Length of the {s1} is {length}");
+// }
+
+// fn get_string_length(string: String) -> i32 {
+//     string.len()
+// }
+
+// fn main() {
+//     let s1 = String::from("Hello");
+//     let (s2, length) = get_string_length(s1);
+
+//     println!("Length of the {s2} is {length}");
+// }
+
+// fn get_string_length(s: String) -> (String, usize) {
+//     let length = s.len();
+//     (s, length)
+// }
+
+// this will throw an error becaus of immutable reference
+// fn main() {
+//     let s1 = String::from("Hello");
+//     let length = get_string_length(&s1);
+//     println!("Length of the string: {s1} is {length}");
+// }
+
+// fn get_string_length(s: &String) -> usize {
+//     s.push_str(", World!");
+//     s.len()
+// }
+
+// mutable reference
+// fn main() {
+//     let mut s1 = String::from("Hello");
+//     let length = get_string_length(&mut s1);
+//     println!("Length of the string: {s1} is {length}");
+// }
+
+// fn get_string_length(s: &mut String) -> usize {
+//     s.push_str(", World!");
+//     s.len()
+// }
+
+// limitation of mutable reference
 fn main() {
-    let name = String::from("Vigneshwar");
-    let my_name = greeting(name);
-
-    println!("Welcome to my course {my_name}");
-}
-
-fn greeting(name: String) -> String {
-    println!("Hello {name}");
-    name
+    let mut s1 = String::from("Hello");
+    let reference_one = &mut s1;
+    let reference_two = &mut s1;
+    println!("Mutable reference : {reference_one} and {reference_two}");
 }
