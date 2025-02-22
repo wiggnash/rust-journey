@@ -5,11 +5,13 @@ fn main() {
 
     // if we do string.clear() here , then result will also becomes invalid
     string.clear();
-    // println!("index of the space : {}", result);
+    println!("index of the space : {}", result);
     // value of result is 5 here also
 }
 
 fn return_first_word(s: &String) -> &str {
+    // println!("word passed in the argument : {s}");
+    // println!("{}", &s[0..2]);
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
