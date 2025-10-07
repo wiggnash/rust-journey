@@ -1,3 +1,7 @@
+`loop` : creates an infinite loop
+we can break this loop by adding break if we get the Equal variant
+
+```rust
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
@@ -32,3 +36,15 @@ fn main() {
         }
     }
 }
+```
+
+handle error with the match
+
+```rust
+let guess: u32 = match guess.trim().parse() {
+	Ok(num) => num,
+	Err(_) => continue,
+};
+```
+
+`parse` will return two variants , this can be matched and make the program to continue executing the loop again using the continue

@@ -17,3 +17,5 @@
 2.7 [[Generating Secret Number and Using Rand Crate]]
 2.8 [[Ensuring Reproducible Builds and Updating Dependencies]]
 2.9 [[Generating a Random Number]]
+2.10 [[Comparing the guess to the secret number]]
+2.11 [[Allowing Multiple Guessess with looping and handle invalid inputs]]
