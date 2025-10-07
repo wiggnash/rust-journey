@@ -1,0 +1,19 @@
+**Rust Book** : https://doc.rust-lang.org/book/
+
+## 1. Getting Started 
+
+1.1 [[Installation]]
+1.2 [[Hello World In Rust]]
+1.3 [[Hello, Cargo!]]
+
+## 2. Programming a Guessing Game
+
+2.1 [[Introduction and the project setup]]
+2.2 [[Processing a Guess]]
+2.3 [[Storing Values with Variables]]
+2.4 [[Receiving User Input]]
+2.5 [[Handling Potential Failure with Result]]
+2.6 [[Printing values with printlin! placeholders and Testing first part]]
+2.7 [[Generating Secret Number and Using Rand Crate]]
+2.8 [[Ensuring Reproducible Builds and Updating Dependencies]]
+2.9 [[Generating a Random Number]]
