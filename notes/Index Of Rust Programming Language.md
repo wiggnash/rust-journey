@@ -19,3 +19,10 @@
 2.9 [[Generating a Random Number]]
 2.10 [[Comparing the guess to the secret number]]
 2.11 [[Allowing Multiple Guessess with looping and handle invalid inputs]]
+
+## 3. Common Programming Concepts
+
+3.1 [[Variables and Mutability in Rust]]
+	3.1.1 [[Constants in Rust]]
+	3.1.2 [[Shadowing in Rust]]
+	
