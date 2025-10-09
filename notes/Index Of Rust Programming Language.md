@@ -25,4 +25,7 @@
 3.1 [[Variables and Mutability in Rust]]
 	3.1.1 [[Constants in Rust]]
 	3.1.2 [[Shadowing in Rust]]
+3.2 [[Data Types in Rust]]
+	3.2.1 [[Scalar types in RUST]]
+	3.2.2 [[Compound types in RUST]]
 	
