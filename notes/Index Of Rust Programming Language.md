@@ -28,4 +28,5 @@
 3.2 [[Data Types in Rust]]
 	3.2.1 [[Scalar types in RUST]]
 	3.2.2 [[Compound types in RUST]]
-	
+3.3 [[Functions in RUST]]
+3.4 [[Control Flow in RUST]]
