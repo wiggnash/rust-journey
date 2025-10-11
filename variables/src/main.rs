@@ -33,4 +33,39 @@ fn main() {
 
     let guess: u32 = "42".parse().expect("Not a number!");
     println!("Parsed Number {guess}");
+
+    // compound data types
+    // 1. tuples
+    let sample_tuple = (1.2, 1, 500);
+    let (x, y, z) = sample_tuple;
+
+    println!("Tuple elements are x {x} y {y} z {z}");
+
+    let first_element = sample_tuple.0;
+    let second_element = sample_tuple.1;
+    let third_element = sample_tuple.2;
+
+    println!(
+        "First element : {first_element}, Second element : {second_element}, Third element : {third_element}"
+    );
+
+    // 2. arrays
+    let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+
+    // println!("Month array : {months}"); // showing some error need to find out why
+    let fixed_len_array: [i32; 5] = [1, -3, 4, 8, 2];
+    let predefined_array = [3; 5];
 }

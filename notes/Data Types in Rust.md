@@ -1,20 +1,53 @@
-Every value is of a certain data type
-Therefore RUST know how to work with that data
+**Reference:** [Data Types - The Rust Programming Language](https://doc.rust-lang.org/book/ch03-02-data-types.html#data-types)
 
-Rust is a statically typed language : we need to mention all the types of the variables before the compile time , compiler can also infer the type based on what data is being used and how we use it . 
+---
 
-it is good practise to mention the types when a variable type is changed from one form to another form
+## Overview
+
+- Every value in Rust has a specific **data type**
+- The data type tells Rust how to work with that data
+- Rust is a **statically typed language**: all variable types must be known at compile time
+
+---
+
+## Type Inference vs Explicit Types
+
+Rust can **infer types** based on:
+
+- The value assigned to a variable
+- How the variable is used
+
+However, **explicit type annotations** are required when:
+
+- Multiple types are possible
+- Converting from one type to another (type parsing/casting)
+
+### ✅ Best Practice
+
+Always specify types when converting between data types to avoid ambiguity.
+
+---
+
+## Example: Type Annotation Requirement
+
+When parsing a string into a number, you **must** specify the target type:
 
 ```rust
 let guess: u32 = "42".parse().expect("Not a number!");
 println!("Parsed Number {guess}");
 ```
 
-if we dont mention the type there we will get an error something like this
+### ❌ Without Type Annotation
+
+If you omit the type, the compiler cannot infer which numeric type to use:
+
+```rust
+let guess = "42".parse().expect("Not a number!");
+```
+
+**Error:**
 
 ```bash
-(base) ➜  variables git:(main) ✗ cargo check
-    Checking variables v0.1.0 (/home/wiggnash/Vicky/Projects/learning_programming_languages/rust/variables)
 error[E0284]: type annotations needed
   --> src/main.rs:34:9
    |
@@ -26,13 +59,24 @@ help: consider giving `guess` an explicit type
    |
 34 |     let guess: /* Type */ = "42".parse().expect("Not a number!");
    |              ++++++++++++
-
-For more information about this error, try `rustc --explain E0284`.
-error: could not compile `variables` (bin "variables") due to 1 previous error
 ```
 
-# Types in RUST
+**Why?** The `parse()` method can convert to many types (u32, i64, f64, etc.), so Rust needs you to specify which one.
 
-1. [[Scalar types in RUST]]
-2. [[Compound types in RUST]]
-3. 
+---
+
+## Categories of Data Types in Rust
+
+Rust has two main type categories:
+
+1. **[[Scalar types in RUST]]** - Represent a single value
+2. **[[Compound types in RUST]]** - Group multiple values together
+
+---
+
+## 💡 Key Takeaways
+
+- Rust's static typing catches errors at compile time
+- Type inference reduces boilerplate in most cases
+- Explicit annotations are necessary when ambiguity exists
+- Always annotate when parsing or converting types
