@@ -34,3 +34,7 @@
 ## 4. Understanding ownership
 
 4.1 [[What is ownership in RUST?]]
+	4.1.1 [[Ownership Rules in Rust and Variable Scope]]
+	4.1.2 [[String Literal and String Type in RUST]]
+	4.1.3 [[Memory and Allocation]]
+	
