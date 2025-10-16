@@ -30,3 +30,7 @@
 	3.2.2 [[Compound types in RUST]]
 3.3 [[Functions in RUST]]
 3.4 [[Control Flow in RUST]]
+
+## 4. Understanding ownership
+
+4.1 [[What is ownership in RUST?]]
