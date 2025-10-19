@@ -30,3 +30,16 @@
 	3.2.2 [[Compound types in RUST]]
 3.3 [[Functions in RUST]]
 3.4 [[Control Flow in RUST]]
+
+## 4. Understanding ownership
+
+4.1 [[What is ownership in RUST?]]
+	4.1.1 [[Ownership Rules in Rust and Variable Scope]]
+	4.1.2 [[String Literal and String Type in RUST]]
+	4.1.3 [[Memory and Allocation]]
+	4.1.4 [[Variables and Data interacting with move]]
+	4.1.5 [[Scope and Assignment in RUST]]
+	4.1.6 [[Clone and Copy]]
+	4.1.7 [[Ownership - Functions and its return RUST]]
+4.2 [[References and Borrowing]]
+
