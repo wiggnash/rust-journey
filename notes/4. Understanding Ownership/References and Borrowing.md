@@ -1,3 +1,5 @@
+# Rust References and Borrowing
+
 ## The Ownership Problem
 
 ### Initial Issue with Ownership Transfer
@@ -30,7 +32,7 @@ A **reference** is like a pointer that holds an address. Key properties:
 - The reference points to a **valid value** for its entire lifetime
 - Represented by the `&` symbol
 
-**Core concept:** References allow you to refer to a value without taking ownership.
+💡 **Core concept:** References allow you to refer to a value without taking ownership.
 
 📌 Related: [[Pointer and References]]
 
@@ -179,6 +181,37 @@ println!("{r3}");
 
 ---
 
+## Dangling References
+
+### What is a Dangling Reference?
+
+A **dangling reference** is a pointer that references a location in memory that may have been given to someone else by freeing some memory while preserving a pointer to that memory.
+
+⚡ **Rust's guarantee:** The compiler ensures there are no dangling references. It will make sure that the data will not go out of scope before the reference to that data does.
+
+### Example: Compiler Prevents Dangling References
+
+```rust
+fn main() {
+    let reference_to_string = dangle();
+}
+
+fn dangle() -> &String { // ❌ This will not compile
+    let s = String::from("Hello");
+    &s
+} // s goes out of scope and is dropped here
+```
+
+**Why this fails:**
+
+- When `dangle` finishes, `s` goes out of scope and is dropped
+- The memory is freed
+- But we're returning a reference to that string
+- The reference would point to invalid memory (dangling reference)
+- ✅ Rust prevents this at compile time
+
+---
+
 ## Summary
 
 |Reference Type|Symbol|Can Modify?|Multiple Allowed?|
@@ -186,9 +219,10 @@ println!("{r3}");
 |Immutable|`&`|❌ No|✅ Yes|
 |Mutable|`&mut`|✅ Yes|❌ No (one at a time)|
 
-**Key Rules:**
+### Key Rules:
 
 - ✅ Multiple immutable references are allowed
 - ✅ One mutable reference per scope
 - ❌ Cannot mix mutable and immutable references
+- ❌ Rust prevents dangling references at compile time
 - 📌 Reference scope = creation to last use
