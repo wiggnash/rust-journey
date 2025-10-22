@@ -1,5 +1,6 @@
 **Rust Book** : https://doc.rust-lang.org/book/
 
+[[Introduction to Rust Programming Language]]
 ## 1. Getting Started 
 
 1.1 [[Installation]]
@@ -42,4 +43,4 @@
 	4.1.6 [[Clone and Copy]]
 	4.1.7 [[Ownership - Functions and its return RUST]]
 4.2 [[References and Borrowing]]
-
+4.3 [[The Slice Type in RUST]]
